@@ -1,46 +1,21 @@
-# Video Manipulation Detector (Hugging Face + Streamlit)
+# 🎥 Fake Video Detector
 
-**Status:** Step 1 — Project setup + basic Streamlit app + Hugging Face Inference API test on frames.
+A Streamlit app that detects **fake/manipulated videos** using the Hugging Face model [microsoft/VideoFakeDetection](https://huggingface.co/microsoft/VideoFakeDetection).
 
-This project detects manipulated videos (deepfakes/shallow fakes) by extracting frames and calling a hosted model on the Hugging Face Inference API.
+## 🚀 Features
+- Upload video files (`.mp4`, `.avi`, `.mov`, `.mkv`)
+- Frame-by-frame analysis via Hugging Face API
+- Calculates average, median, and max fake probabilities
+- Histogram of frame-wise fake scores
+- Highlights the 3 most suspicious frames
+- Final **Real vs Fake verdict**
 
-We will iterate step-by-step. This README will be expanded in later steps with architecture diagrams, evaluation methodology, and deployment instructions.
-
----
-
-## Quickstart
-
-1) **Clone or unzip** this project.
-2) **Create a virtual environment** (recommended):
+## 🛠️ Installation
+1. Clone the repo:
    ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # Windows: .venv\Scripts\activate
-   ```
-3) **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4) **Set your Hugging Face API key**:
-   - Copy `.env.example` to `.env` and set `HF_API_KEY` (and optionally `HF_MODEL_ID`).
+   git clone https://github.com/yourusername/fake-video-detector.git
+   cd fake-video-detector
 
-5) **Run the Streamlit app**:
-   ```bash
-   streamlit run app.py
-   ```
-   Upload a short video (mp4/avi/mov/mkv), extract a few frames, and test the API on a frame.
-
----
-
-## Env Vars
-
-- `HF_API_KEY`: Your Hugging Face token (Settings → Access Tokens).
-- `HF_MODEL_ID` (optional): Model repo id. Default: `selimsef/xception`.
-
-> Note: Many HF deepfake models are frame-based and may have different output formats. We include a parser that handles common patterns.
-
----
-
-## Next Steps (Planned)
 
 - Step 2: Full-frame batch analysis and aggregation per video.
 - Step 3: Add face detection/cropping option for better signal.
