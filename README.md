@@ -13,7 +13,7 @@ A Streamlit app that detects **fake/manipulated videos** using the Hugging Face 
 ## 🛠️ Installation
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/fake-video-detector.git
+   [git clone https://github.com/yourusername/fake-video-detector.git](https://github.com/BhushanJadhav7/Fake_Video_Detection-.git)
    cd fake-video-detector
 
 
