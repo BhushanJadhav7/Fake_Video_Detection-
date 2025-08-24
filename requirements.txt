@@ -1,0 +1,7 @@
+streamlit
+opencv-python
+requests
+python-dotenv
+Pillow
+numpy
+tqdm
